@@ -17,11 +17,17 @@ provider "azurerm" {
     template_deployment {
       delete_nested_items_during_deletion = false
     }
-
   }
-
-
 }
+
+
+# If not Subscribed to Clour Routers Catalyst-Edge-8000v, then subscribe to it
+resource "azurerm_marketplace_agreement" "c8kv" {
+  publisher = "cisco"
+  offer     = "cisco-c8000v"
+  plan      = try("17_07_01a-byol")
+}
+
 
 # Deploy a resource group
 resource "azurerm_resource_group" "rgroup" {
