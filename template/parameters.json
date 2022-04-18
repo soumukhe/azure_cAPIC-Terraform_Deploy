@@ -9,10 +9,10 @@
             "value": "capic2502"
         },
         "adminPasswordOrKey": {
-            "value": "123Cisco123!"
+            "value": "some_value"
         },
         "adminPublicKey": {
-            "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDA6CI26ym4VD1PWBq83rx3zbHsn8Ky668ALZfG8z17vDeu6skxb41qPQyL80ovesQx+avrh/kiNhm+Nt87XYTcnaG03wj6NB5jwCvD8vIVKPULximDUxfxA8lp9DgjNdiUSyys2Mt2NVzT7J9vGKpnIK3FxrMW7RkDXBb6N8NCbyvu5d+QVFsbjej5neOAfSR7YJSDLhy2bUrZqKVefOkUeHiufo+hPqObMCYjc5GULV+cqTUTW2ippHtCKXTyYJudiJAaWFiWYcNiupH91LRvOABIQk38CX3OlnvG3ab+mUJq6XGMEKPJMlxI+cQBkjn2oKa8I8s43vyfsp6xwFjL"
+            "value": "public_key"
         },
         "FabricName": {
             "value": "fabric2502"
