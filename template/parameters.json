@@ -1,0 +1,69 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "vmName": {
+            "value": "capic2502"
+        },
+        "adminPasswordOrKey": {
+            "value": "123Cisco123!"
+        },
+        "adminPublicKey": {
+            "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDA6CI26ym4VD1PWBq83rx3zbHsn8Ky668ALZfG8z17vDeu6skxb41qPQyL80ovesQx+avrh/kiNhm+Nt87XYTcnaG03wj6NB5jwCvD8vIVKPULximDUxfxA8lp9DgjNdiUSyys2Mt2NVzT7J9vGKpnIK3FxrMW7RkDXBb6N8NCbyvu5d+QVFsbjej5neOAfSR7YJSDLhy2bUrZqKVefOkUeHiufo+hPqObMCYjc5GULV+cqTUTW2ippHtCKXTyYJudiJAaWFiWYcNiupH91LRvOABIQk38CX3OlnvG3ab+mUJq6XGMEKPJMlxI+cQBkjn2oKa8I8s43vyfsp6xwFjL"
+        },
+        "FabricName": {
+            "value": "fabric2502"
+        },
+        "vmSize": {
+            "value": "Standard_D8s_v3"
+        },
+        "imageSku": {
+            "value": "25_0_2-byol"
+        },
+        "InfraVNETPool": {
+            "value": "10.52.0.0/24"
+        },
+        "ExternalSubnets": {
+            "value": "0.0.0.0/0"
+        },
+        "publicIPNewOrExisting": {
+            "value": "new"
+        },
+        "publicIPName": {
+            "value": "capic2502-pip"
+        },
+        "publicIpDns": {
+            "value": "capic2502-a1b0aec95d"
+        },
+        "publicIPResourceGroup": {
+            "value": "capic2502"
+        },
+        "publicIPAllocationMethod": {
+            "value": "Static"
+        },
+        "publicIPSku": {
+            "value": "Basic"
+        },
+        "virtualNetworkName": {
+            "value": "overlay-1"
+        },
+        "mgmtNsgName": {
+            "value": "controllers_cloudapp-cloud-infra"
+        },
+        "mgmtAsgName": {
+            "value": "controllers_cloudapp-cloud-infra"
+        },
+        "subnetPrefix": {
+            "value": "subnet-"
+        },
+        "_artifactsLocation": {
+            "value": "https://catalogartifact.azureedge.net/publicartifacts/cisco.cisco-aci-cloud-apic-8daf35dd-b9ee-4fd4-9235-74bc41ddc901-25_0_2-byol/Artifacts/mainTemplate.json"
+        },
+        "_artifactsLocationSasToken": {
+            "value": ""
+        }
+    }
+}
