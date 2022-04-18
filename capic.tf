@@ -38,7 +38,7 @@ resource "azurerm_resource_group_template_deployment" "capic" {
   template_content    = file("template/template.json")
   parameters_content = jsonencode({
     adminPasswordOrKey       = { value = var.adminPasswordOrKey }
-    adminPublicKey           = { value = var. adminPublicKey }
+    adminPublicKey           = { value = var.adminPublicKey }
     location                 = { value = var.location }
     vmName                   = { value = var.vmName }
     vmSize                   = { value = var.vmSize }
@@ -58,7 +58,7 @@ resource "azurerm_resource_group_template_deployment" "capic" {
     mgmtNsgName              = { value = var.mgmtNsgName }
     mgmtAsgName              = { value = var.mgmtAsgName }
     subnetPrefix             = { value = var.subnetPrefix }
-    _artifactsLocation       = { value = var._artifactsLocation}
+    _artifactsLocation       = { value = var._artifactsLocation }
 
   })
 
@@ -69,14 +69,14 @@ data "azurerm_subscription" "primary" {
 }
 
 data "azurerm_virtual_machine" "capic" {
-  depends_on = [azurerm_resource_group_template_deployment.capic]
+  depends_on          = [azurerm_resource_group_template_deployment.capic]
   name                = var.vmName
   resource_group_name = azurerm_resource_group.rgroup.name
 }
 
 # Assign contributor role
 resource "azurerm_role_assignment" "capic" {
-  depends_on = [azurerm_resource_group_template_deployment.capic]
+  depends_on           = [azurerm_resource_group_template_deployment.capic]
   scope                = data.azurerm_subscription.primary.id
   role_definition_name = "Contributor"
   principal_id         = data.azurerm_virtual_machine.capic.identity.0.principal_id

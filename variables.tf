@@ -46,104 +46,104 @@ variable "vmName" {
 }
 
 variable "vmSize" {
-  type = string
+  type    = string
   default = "size"
 }
 
 variable "imageSku" {
-  type = string
+  type    = string
   default = "sku"
 }
 
 variable "imageVersion" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "adminUsername" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "fabricName" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "infraVNETPool" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "externalSubnets" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "publicIpDns" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "publicIPName" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 
 variable "publicIPSku" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "publicIPAllocationMethod" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "publicIPNewOrExisting" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "publicIPResourceGroup" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "virtualNetworkName" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "mgmtNsgName" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 
 variable "mgmtAsgName" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "subnetPrefix" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "_artifactsLocation" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "adminPasswordOrKey" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
 variable "adminPublicKey" {
-  type = string
+  type    = string
   default = "some_value"
 }
 
