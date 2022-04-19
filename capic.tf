@@ -1,3 +1,7 @@
+# Please run the following 2 commands before doing a Terraform apply
+# subs=<yourAzureSubscriptionID>
+# terraform import azurerm_marketplace_agreement.c8kv /subscriptions/$subs/providers/Microsoft.MarketplaceOrdering/agreements/cisco/offers/cisco-c8000v/plans/17_07_01a-byol
+
 terraform {
   required_providers {
     azurerm = {
