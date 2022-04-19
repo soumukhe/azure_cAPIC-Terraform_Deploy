@@ -1,7 +1,3 @@
-# Please run the following 2 commands before doing a Terraform apply
-# subs=<yourAzureSubscriptionID>
-# terraform import azurerm_marketplace_agreement.c8kv /subscriptions/$subs/providers/Microsoft.MarketplaceOrdering/agreements/cisco/offers/cisco-c8000v/plans/17_07_01a-byol
-
 terraform {
   required_providers {
     azurerm = {
@@ -91,4 +87,8 @@ resource "azurerm_role_assignment" "capic" {
   scope                = data.azurerm_subscription.primary.id
   role_definition_name = "Contributor"
   principal_id         = data.azurerm_virtual_machine.capic.identity.0.principal_id
+}
+
+output "capicPublicIP" {
+  value =  data.azurerm_virtual_machine.capic.public_ip_address
 }
