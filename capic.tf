@@ -1,3 +1,9 @@
+# This is the main Terraform code
+# Please make sure to import the state for the c8Kv subscription first as described at: https://unofficialaciguide.com/2022/04/18/deploying-capic-on-azure-with-terraform/
+# subs=<yourAzureSubscriptionID>
+# terraform import azurerm_marketplace_agreement.c8kv /subscriptions/$subs/providers/Microsoft.MarketplaceOrdering/agreements/cisco/offers/cisco-c8000v/plans/17_07_01a-byol
+
+
 terraform {
   required_providers {
     azurerm = {
